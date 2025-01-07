@@ -27,6 +27,7 @@ io.on('connection', (socket) => {
     });
 });
 
-server.listen(3000, '0.0.0.0', () => {
-    console.log('Servidor rodando em http://0.0.0.0:3000');
+const port = process.env.PORT || 3000;  // Usar a porta fornecida pelo Render ou 3000 como fallback
+server.listen(port, '0.0.0.0', () => {
+    console.log(`Servidor rodando em http://0.0.0.0:${port}`);
 });
