@@ -27,6 +27,6 @@ io.on('connection', (socket) => {
     });
 });
 
-server.listen(3000, '10.26.5.36', () => {
-    console.log('Servidor rodando em http://10.26.5.36');
+server.listen(3000, '0.0.0.0', () => {
+    console.log('Servidor rodando em http://0.0.0.0:3000');
 });

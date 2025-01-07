@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io("https://chat-secreto.onrender.com/");
 
 function sendMessage() {
     const message = document.getElementById('message').value;
