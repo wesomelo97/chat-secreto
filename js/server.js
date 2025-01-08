@@ -27,7 +27,18 @@ io.on('connection', (socket) => {
     });
 });
 
+<<<<<<< HEAD
 const port = process.env.PORT || 3000;  // Usar a porta fornecida pelo Render ou 3000 como fallback
 server.listen(port, '0.0.0.0', () => {
     console.log(`Servidor rodando em http://0.0.0.0:${port}`);
+=======
+//development - localhost
+// //production - render
+const isProduction = process.env.NODE_ENV === 'development'; 
+const port = process.env.PORT || 3000;  // Usar a porta fornecida pelo Render ou 3000 como fallback
+const host = isProduction ? '0.0.0.0' : 'localhost';
+
+server.listen(port, host, () => {
+    console.log(`Servidor rodando em http://${host}:${port}`);
+>>>>>>> 6208a9d (Implementado o envio com o enter, e implementado modo localhost e geral)
 });
