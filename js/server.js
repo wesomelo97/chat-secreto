@@ -33,6 +33,6 @@ const isProduction = process.env.NODE_ENV === 'development';
 const port = process.env.PORT || 3000;  // Usar a porta fornecida pelo Render ou 3000 como fallback
 const host = isProduction ? '0.0.0.0' : 'localhost';
 
-server.listen(port, host, () => {
+server.listen(port, '0.0.0.0', () => {
     console.log(`Servidor rodando em http://${host}:${port}`);
 });
